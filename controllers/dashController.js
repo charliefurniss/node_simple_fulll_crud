@@ -1,10 +1,18 @@
 var Dash = require('../models/dash');
 
-// INDEX
 function getAll(req, res) {
-  Dash.find(function(error, celebs) {
+  Dash.find(function(error, data) {
     if (error) console.log(error);
-    res.render('index', {celebs: celebs});
+    res.render('index', {
+      data: {
+        visitors: 1000000,
+        officeTemp: 21,
+        plants: true,
+        weather: "cloudy",
+        fridgeDrinks: 7,
+        teaMaker: "Charlie"
+      }
+    });
   });
 }
 
