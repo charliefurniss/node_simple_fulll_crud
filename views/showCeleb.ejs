@@ -1,0 +1,10 @@
+<h1>My name is <%= celeb.name %></h1>
+
+Age: <%= celeb.age %></br>
+Gender: <%= celeb.gender %></br>
+profession: <%= celeb.profession %> </br></br>
+
+<a href="/celebs/<%= celeb._id %>/edit">Edit Me</a>
+<form method="POST" action="/celebs/<%= celeb._id %>?_method=DELETE">
+  <input type="submit" value="Delete Me :( ">
+</form>

@@ -1,0 +1,12 @@
+<h2>Look at all the celebs in our db...</h2>
+<ul>
+  <% for(i=0; i< celebs.length; i++){  %>
+
+    <li><a href='/celebs/<%= celebs[i]._id %>'><%= celebs[i].name %></a></li>
+
+  <% } %>
+</ul>
+
+<p>If you cant see any celebs, your DB may be empty...</p>
+
+
